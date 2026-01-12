@@ -1,0 +1,125 @@
+{
+  "name": "ralph",
+  "displayName": "Ralph - Autonomous PRD Development",
+  "description": "Runs Copilot Agent Mode in a loop to implement tasks from your PRD.",
+  "version": "0.5.0",
+  "publisher": "ralph-dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aymenfurter/ralph.git"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "AI",
+    "Chat",
+    "Other"
+  ],
+  "keywords": [
+    "copilot",
+    "ai",
+    "agent",
+    "prd",
+    "development",
+    "loop",
+    "ralph",
+    "autonomous"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "views": {
+      "ralph-view": [
+        {
+          "id": "ralph.sidebarView",
+          "name": "Control Panel",
+          "type": "webview",
+          "when": "true"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ralph-view",
+          "title": "Ralph",
+          "icon": "icon.png"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "ralph.showPanel",
+        "title": "Ralph: Open Control Panel",
+        "icon": "$(rocket)"
+      },
+      {
+        "command": "ralph.viewLogs",
+        "title": "Ralph: View Logs"
+      }
+    ],
+    "configuration": {
+      "title": "Ralph",
+      "properties": {
+        "ralph.files.prdPath": {
+          "type": "string",
+          "default": "PRD.md",
+          "description": "Path to the PRD (Product Requirements Document) file"
+        },
+        "ralph.files.progressPath": {
+          "type": "string",
+          "default": "progress.txt",
+          "description": "Path to the progress tracking file"
+        },
+        "ralph.prompt.customTemplate": {
+          "type": "string",
+          "default": "",
+          "editPresentation": "multilineText",
+          "description": "Custom prompt template to override the default. Use {{task}} for the task description, {{prd}} for PRD contents, {{progress}} for progress log, {{requirements}} for requirement steps, and {{workspace}} for workspace path."
+        },
+        "ralph.prompt.customPrdGenerationTemplate": {
+          "type": "string",
+          "default": "",
+          "editPresentation": "multilineText",
+          "description": "Custom PRD generation prompt template. Use {{task}} for user's request and {{workspace}} for workspace path."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "pretest:unit": "npm run compile",
+    "test:unit": "mocha --reporter spec out/test/unit/**/*.unit.test.js",
+    "pretest:coverage": "npm run compile",
+    "test:coverage": "nyc npm run test:unit"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.17.0",
+    "@types/sinon": "^21.0.0",
+    "@types/vscode": "^1.93.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^8.57.0",
+    "glob": "^10.4.5",
+    "mocha": "^10.8.2",
+    "nyc": "^17.1.0",
+    "sinon": "^21.0.1",
+    "source-map-support": "^0.5.21",
+    "typescript": "^5.6.3"
+  },
+  "extensionDependencies": [
+    "github.copilot-chat"
+  ]
+}
