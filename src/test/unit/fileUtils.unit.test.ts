@@ -2,13 +2,15 @@ import * as assert from 'assert';
 
 // Since fileUtils imports vscode modules, we test the pure parsing logic
 // by re-implementing it here for unit testing purposes.
+// This approach is consistent with other unit tests in this project (see promptBuilder.unit.test.ts)
+// and allows us to test the regex logic without requiring the full VS Code environment.
 // The actual integration testing happens in the VS Code test environment.
 
 enum TaskStatus {
-    PENDING = 'pending',
-    IN_PROGRESS = 'in-progress',
-    COMPLETE = 'complete',
-    BLOCKED = 'blocked'
+    PENDING = 'PENDING',
+    IN_PROGRESS = 'IN_PROGRESS',
+    COMPLETE = 'COMPLETE',
+    BLOCKED = 'BLOCKED'
 }
 
 interface Task {
