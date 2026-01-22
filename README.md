@@ -63,6 +63,20 @@ Then open the Control Panel and click **Start**.
 5. Copilot marks task complete
 6. Repeat until all tasks done
 
+## Configuration
+
+### Copilot Settings
+
+If you encounter the "Continue" button repeatedly during task execution (when hitting max iterations), you can configure VS Code Copilot settings to allow more requests:
+
+1. Open VS Code Settings (Cmd/Ctrl + ,)
+2. Search for `chat.agent.maxRequests`
+3. Set to a higher value (e.g., 100 or more). The default is 25.
+
+**Note:** There is no enforced maximum, but consider your use case and the complexity of your tasks when setting this value.
+
+For more information on available Copilot settings and autonomy levels, see the [VS Code Copilot Settings documentation](https://code.visualstudio.com/docs/copilot/reference/copilot-settings).
+
 ## Requirements
 
 - VS Code 1.93 or later
